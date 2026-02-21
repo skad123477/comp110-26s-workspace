@@ -27,18 +27,18 @@ def contains_char(secret_word: str, char_guess: str) -> bool:
 
     return False
 
-def emojified(guess: str, secret_word: str) -> str:
+def emojified(guess: str, secret: str) -> str:
     """Return a string of emojis that represent the accuracy of the guess."""
-    assert len(guess) == len(secret_word)
+    assert len(guess) == len(secret)
 
     idx: int = 0
     result: str = ""
 
-    while idx <len(secret_word):
-        if guess[idx] == secret_word[idx]:
+    while idx <len(secret):
+        if guess[idx] == secret[idx]:
             result += GREEN_BOX
         else:
-            if contains_char(secret_word, guess[idx]):
+            if contains_char(secret, guess[idx]):
                 result += YELLOW_BOX
             else:
                 result += WHITE_BOX
