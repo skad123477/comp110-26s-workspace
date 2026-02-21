@@ -17,8 +17,10 @@ def input_letter() -> str:
         exit()
     return letter
    
-def contains_char(word: str, letter: str) -> None:
+def contains_char() -> None:
   """Check to see if the input character matches with any characters in the input word"""
+  word: str = input_word()
+  letter: str = input_letter()      
   print(f"Searching for {letter} in {word}") #Tried just using print, but that was very inefficient. Using fstring allowed me to print the string much more efficiently. 
 
   count: int = 0
@@ -57,9 +59,7 @@ def contains_char(word: str, letter: str) -> None:
 
 def main() -> None:
    """Entry point of the Chardle game"""
-   word: str = input_word()
-   letter: str = input_letter()
-   contains_char(word, letter)
+   contains_char()
 
 if __name__ == "__main__": #Last two lines of code. 
     main()
