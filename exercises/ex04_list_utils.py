@@ -15,6 +15,7 @@ def all(input: list[int], value: int) -> bool:
 
     return True
 
+
 def max(input: list[int]) -> int:
     """Return the largest integer in input.
     Raise ValueError if input is empty.
@@ -29,6 +30,7 @@ def max(input: list[int]) -> int:
             largest = item
 
     return largest
+
 
 def is_equal(list1: list[int], list2: list[int]) -> bool:
     """Return True if list1 and list2 are deeply equal."""
