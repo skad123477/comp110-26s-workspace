@@ -71,9 +71,13 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
     return result
 
 
-def update_attendance(attendance: dict[str, list[str]], day: str, student: str) -> None:
-    """Add a student to the attendance list for a given day."""
+def update_attendance(
+    attendance: dict[str, list[str]], day: str, student: str
+) -> dict[str, list[str]]:
+    """Add a student to the attendance list for a given day, no duplicates."""
     if day in attendance:
-        attendance[day].append(student)
+        if student not in attendance[day]:
+            attendance[day].append(student)
     else:
         attendance[day] = [student]
+    return attendance
