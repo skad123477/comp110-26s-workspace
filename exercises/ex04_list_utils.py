@@ -2,6 +2,7 @@
 
 __author__ = "730868127"
 
+
 def all(input: list[int], value: int) -> bool:
     """Return True if all elements in input equal value.
     Return False if any element does not match or if list is empty.
@@ -45,8 +46,8 @@ def is_equal(list1: list[int], list2: list[int]) -> bool:
 
     return True
 
+
 def extend(list1: list[int], list2: list[int]) -> None:
-    """Mutate list1 by appending elements of list2 to it."""
+    """Mutate list1 by appending elements of list2 to the end of it."""
     for item in list2:
         list1.append(item)
-
