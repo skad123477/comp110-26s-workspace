@@ -1,4 +1,4 @@
-"""Simulate a river."""
+"""Simulate a river over time."""
 
 __author__ = "730868127"
 
